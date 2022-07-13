@@ -263,17 +263,21 @@ button {
   width: 480px;
   text-align: center;
   padding-top: 118px;
-  padding-bottom: 198px;
+  padding-bottom: 118px;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img-480px.jpg);
   background-size: 100%, cover;
   background-position: center;
 }
 @media screen and (min-width: 768px) {
   .hero {
     width: 768px;
+    background-size: 100%, cover;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img-768px.jpg);
+    background-size: 100%, cover;
+    background-position: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -283,21 +287,34 @@ button {
     padding-bottom: 200px;
     max-width: 1600px;
     height: 600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
+    background-size: 100%, cover;
+    background-position: center;
   }
 }
 
 .hero__title {
-  width: 696px;
+  width: 360px;
   margin-top: 0px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 30px;
-  color: var(--primary-bg-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 42px;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--primary-bg-color);
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
 }
 
 .hero__btn {
