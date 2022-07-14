@@ -11,15 +11,21 @@
   color: var(--title-text-color);
 }
 
+
+
 .section__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   @include font(700, 36px, 1.17, 0.03em);
 
   text-align: center;
 
   color: var(--title-text-color);
+
+  @media screen and (min-width:1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .features__title {
