@@ -29,9 +29,11 @@
 }
 
 .filter {
+  display: flex;
   margin-bottom: 50px;
   justify-content: center;
-  display: flex;
+  flex-wrap: wrap;
+  
 }
 
 .filter__item:not(:last-child) {

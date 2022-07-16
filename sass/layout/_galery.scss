@@ -1,3 +1,16 @@
+.galery__list {
+  @media screen and (min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width:1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px; 
+  }  
+}
+
 .galery__pre-title {
   @include font(400, 16px, 1.9, 0.03em);
   // font-weight: 400;
@@ -25,13 +38,11 @@
   // letter-spacing: 0.06em;
 }
 
-.galery {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
-}
+
 
 .galery__item {
+  width: 354px;
+
   margin: 15px;
   flex-basis: calc((100% - 90px) / 3);
   position: relative;
