@@ -1,6 +1,7 @@
-.section--other-bg {
-  background-color: #f5f4fa;
-}
+// .section--other-bg {
+
+//   background-color: #f5f4fa;
+// }
 
 .team__content {
   padding-top: 30px;
@@ -33,6 +34,7 @@
 .team__item {
   width: 450px;
   margin-bottom: 30px;
+
   text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -43,6 +45,13 @@
 
   @media screen and (min-width:1200px) {
     width: 270px;
+    margin-bottom: 0px;
+  }
+}
+
+.team__item:nth-child(-n + 5) {
+  @media screen and (min-width:768px) and (max-width:1200px) {
+    margin-bottom: 30px;
   }
 }
 
