@@ -1,6 +1,7 @@
 .menu-btn {
-    position: relative;
-    display: flex;
+    // position: relative;
+    // display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     padding: 0;
@@ -16,4 +17,17 @@
         display: none;
     }
 
+    &__icon {
+        width: 44px;
+        height: 44px;
+
+        &-open {
+            opacity: 1;
+            fill: white;
+        }
+
+        &-close {
+            opacity: 0;
+        }
+    }
 }
