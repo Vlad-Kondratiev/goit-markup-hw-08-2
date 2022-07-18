@@ -110,7 +110,7 @@ button {
 }
 .menu-btn__icon-open {
   opacity: 1;
-  fill: white;
+  fill: rgb(0, 0, 0);
 }
 .menu-btn__icon-close {
   opacity: 0;
@@ -1114,6 +1114,92 @@ button {
   .galery__img {
     width: 370px;
   }
+}
+
+.mobile-menu {
+  padding: 48px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.mobile-nav__link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.mobilr-nav__item {
+  margin-bottom: 32px;
+}
+
+.mobilr-nav__item:last-child {
+  margin-bottom: 300px;
+}
+
+.mobile-contacts__link-phone {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+
+.mobile-contacts__item-phone {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts__link-mail {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mobile-contacts__item-mail {
+  margin-bottom: 64px;
+}
+
+.mobile-socials__list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+}
+
+.mobile-socials__link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+
+.mobile-socials__link::after {
+  position: absolute;
+  top: 0;
+  display: block;
+  content: "";
+  width: 1px;
+  height: 22px;
+  background-size: contain;
+  padding-left: 10px;
+  background-color: #757575;
 }
 
 .backdrop {
