@@ -3,6 +3,8 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --primary-bg-color: #ffffff;
+  --anim-fast: 250ms ease-in;
+  --anim-slow: 500ms ease-in-out;
 }
 
 h1,
@@ -68,12 +70,6 @@ button {
   }
 }
 
-.section--other-bg {
-  background-color: #f5f4fa;
-  background-size: 100%, cover;
-  background-position: center;
-}
-
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -87,8 +83,19 @@ button {
   margin: -1px;
 }
 
-.menu-btn {
-  display: block;
+.menu-btn__icon {
+  width: 44px;
+  height: 44px;
+}
+.menu-btn__icon-open {
+  opacity: 1;
+  fill: rgb(0, 0, 0);
+}
+.menu-btn__icon-close {
+  opacity: 0;
+}
+
+.menu-btn__open {
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -100,20 +107,27 @@ button {
   z-index: 99;
 }
 @media screen and (min-width: 768px) {
-  .menu-btn {
+  .menu-btn__open {
     display: none;
   }
 }
-.menu-btn__icon {
-  width: 44px;
-  height: 44px;
-}
-.menu-btn__icon-open {
-  opacity: 1;
-  fill: rgb(0, 0, 0);
-}
+
 .menu-btn__icon-close {
+  top: 10px;
+  right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .menu-btn__icon-close {
+    display: none;
+  }
+}
+
+.menu-btn.is-active .menu-btn__icon-open {
   opacity: 0;
+}
+
+.menu-btn.is-active .menu-btn__icon-close {
+  opacity: 1;
 }
 
 .container {
@@ -142,7 +156,9 @@ button {
   background-color: var(--primary-bg-color);
 }
 .header__container {
+  width: 100%;
   display: flex;
+  align-content: center;
   align-items: center;
   display: flex;
   align-items: center;
@@ -150,6 +166,7 @@ button {
 @media screen and (max-width: 767px) {
   .header__container {
     justify-content: space-between;
+    background-color: var(--primary-bg-color);
   }
 }
 .header__logo {
@@ -166,6 +183,10 @@ button {
 }
 .header__logo-dark {
   color: #212121;
+}
+
+.menu-btn__icon-close {
+  position: fixed;
 }
 
 .nav {
@@ -286,7 +307,7 @@ button {
 }
 
 .hero {
-  width: 480px;
+  max-width: 480px;
   height: 400px;
   padding-top: 118px;
   padding-bottom: 118px;
@@ -299,7 +320,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
+    max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img-768px.jpg);
     background-size: 100%, cover;
     background-position: center;
@@ -523,19 +544,19 @@ button {
 }
 
 .team__item {
-  width: 450px;
+  max-width: 450px;
   margin-bottom: 30px;
   text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 @media screen and (min-width: 768px) {
   .team__item {
-    width: 354px;
+    max-width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
   .team__item {
-    width: 270px;
+    max-width: 270px;
     margin-bottom: 0px;
   }
 }
@@ -847,6 +868,9 @@ button {
   margin-left: 10px;
 }
 
+.footer-socials {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 768px) {
   .footer-socials {
     margin-right: 0px;
@@ -989,14 +1013,19 @@ button {
   margin-right: 8px;
 }
 
+@media screen and (min-width: 480px) {
+  .galery {
+    display: block;
+  }
+}
 @media screen and (min-width: 768px) {
-  .galery__list {
+  .galery {
     display: flex;
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1200px) {
-  .galery__list {
+  .galery {
     justify-content: center;
     margin: -15px;
   }
@@ -1101,7 +1130,7 @@ button {
 }
 
 .galery__img {
-  width: 450px;
+  max-width: 450px;
   height: 294px;
 }
 @media screen and (min-width: 768px) {
@@ -1121,9 +1150,24 @@ button {
   position: fixed;
   top: 0;
   left: 0;
-  width: 480px;
+  width: 100vw;
   height: 100vh;
   background-color: #ffffff;
+  outline: 1px solid #2196F3;
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform --anim-slow;
+}
+.mobile-menu.is-open {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: initial;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .mobile-nav__link {
@@ -1135,6 +1179,10 @@ button {
   text-align: center;
   letter-spacing: 0.02em;
   color: #212121;
+}
+
+.mobile-nav__link:hover {
+  color: var(--accent-color);
 }
 
 .mobilr-nav__item {
@@ -1180,6 +1228,11 @@ button {
   position: relative;
 }
 
+.mobile-socials__item {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 .mobile-socials__link {
   font-family: "Roboto";
   font-style: normal;
@@ -1190,16 +1243,15 @@ button {
   color: #2196F3;
 }
 
-.mobile-socials__link::after {
-  position: absolute;
-  top: 0;
-  display: block;
+.mobile-socials__item:not(:first-child)::before {
   content: "";
   width: 1px;
   height: 22px;
-  background-size: contain;
-  padding-left: 10px;
+  position: absolute;
   background-color: #757575;
+  top: 0;
+  margin-left: -10px;
+  display: block;
 }
 
 .backdrop {
