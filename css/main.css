@@ -823,9 +823,17 @@ button {
   margin-bottom: 0px;
 }
 
+.footer-contacts__item:nth-last-child(-n+1) {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 768px) {
   .footer-contacts__item:nth-last-child(-n+1) {
     margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-contacts__item:nth-last-child(-n+1) {
+    margin-bottom: 0px;
   }
 }
 
@@ -879,6 +887,7 @@ button {
 @media screen and (min-width: 1200px) {
   .footer-socials {
     margin-right: 90px;
+    margin-bottom: 0;
   }
 }
 
@@ -1013,19 +1022,14 @@ button {
   margin-right: 8px;
 }
 
-@media screen and (min-width: 480px) {
-  .galery {
-    display: block;
-  }
-}
 @media screen and (min-width: 768px) {
-  .galery {
+  .galery__list {
     display: flex;
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1200px) {
-  .galery {
+  .galery__list {
     justify-content: center;
     margin: -15px;
   }
@@ -1057,7 +1061,7 @@ button {
 }
 
 .galery__item {
-  width: 450px;
+  max-width: 450px;
 }
 @media screen and (min-width: 768px) {
   .galery__item {
@@ -1074,6 +1078,11 @@ button {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .galery__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .galery__item:not(:last-child) {
     margin-bottom: 30px;
@@ -1130,7 +1139,7 @@ button {
 }
 
 .galery__img {
-  max-width: 450px;
+  width: 100%;
   height: 294px;
 }
 @media screen and (min-width: 768px) {

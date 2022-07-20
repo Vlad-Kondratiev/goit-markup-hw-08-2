@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="webstudio" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
@@ -15,7 +15,7 @@
 
 
 <body>
-    <!-=================================== HEADER ================================->
+    <!-- <!-========== HEADER ===========-> -->
 
 
     <header class="header">
@@ -79,12 +79,10 @@
                 </ul>
             <!-- </div> -->
         </div>
-
-            
     </header>
 
     
-    <!-===== FILTER =====->
+    <!-- <!-===== FILTER =====-> -->
 
     <main>
         <section class="section">
@@ -110,7 +108,7 @@
 
      <!-- ============================= -->
     
-                <div class="galery">
+                <!-- <div class="galery"> -->
                     <ul class="galery__list list">
                         <li class="galery__item">
                             <a href="" class="galery__link">
@@ -269,12 +267,12 @@
                     </ul>
                 </div>
                 
-            </div>
+            <!-- </div> -->
         </section>
     </main>
     
     
-    <!-=================================== FOOTER =====================================->
+    <!-- ============= FOOTER ================ -->
 
     <footer class="section footer">           
         <div class="container footer__container">
@@ -346,9 +344,54 @@
                 </div>
             </form>
         </div>
-    </footer>   
+    </footer> 
+    
+    <!-- ======= MOBILE MENU ========= -->
 
-        
+    <div class="mobile-menu" data-menu>
+        <nav class="mobile-nav">
+            <ul class="mobile-nav__list list">
+                <li class="mobilr-nav__item">
+                    <a class="mobile-nav__link link" href="./index.html">Студия</a>
+                </li>
+                <li class="mobilr-nav__item">
+                    <a class="mobile-nav__link link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="mobilr-nav__item">
+                    <a class="mobile-nav__link link" href="">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <ul class="mobile-contacts__list list">
+            <li class="mobile-contacts__item mobile-contacts__item-phone">
+                <a class="mobile-contacts__link mobile-contacts__link-phone link" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+            <li class="mobile-contacts__item mobile-contacts__item-mail">
+                <a class="mobile-contacts__link mobile-contacts__link-mail link" href="mailto:info@devstudio.com" target="_blank" rel="noopener noreferrer">info@devstudio.com</a>
+            </li>
+        </ul>
+
+        <ul class="mobile-socials__list list">
+            <li class="mobile-socials__item">
+                <a class="mobile-socials__link link" href="" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
+            <li class="mobile-socials__item">
+                <a class="mobile-socials__link link" href="" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </li>
+            <li class="mobile-socials__item">
+                <a class="mobile-socials__link link" href="" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </li>
+            <li class="mobile-socials__item">
+                <a class="mobile-socials__link link" href="" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+        </ul>
+    </div>
+
+    
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+
 </body>
 
 </html>   
