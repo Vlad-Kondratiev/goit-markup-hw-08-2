@@ -185,6 +185,10 @@ button {
   color: #212121;
 }
 
+.menu-btn {
+  z-index: 10;
+}
+
 .menu-btn__icon-close {
   position: fixed;
 }
@@ -1140,7 +1144,7 @@ button {
 
 .galery__img {
   width: 100%;
-  height: 294px;
+  height: auto;
 }
 @media screen and (min-width: 768px) {
   .galery__img {
@@ -1160,7 +1164,7 @@ button {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: #ffffff;
   outline: 1px solid #2196F3;
   transform: translateX(100%);
@@ -1269,6 +1273,7 @@ button {
   background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
+  z-index: 99;
   transition: opacity 250ms, visibility 250ms;
 }
 
@@ -1277,7 +1282,7 @@ button {
 }
 
 .modal {
-  width: 530px;
+  width: 95vw;
   min-height: 580px;
   background-color: #fff;
   padding: 40px;
@@ -1288,6 +1293,16 @@ button {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 530px;
+  }
 }
 
 .modal-close-btn__icon {
@@ -1432,13 +1447,29 @@ button {
 
 .check-field__text {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
   justify-content: center;
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 480px) {
+  .check-field__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .check-field__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .check-field__text span {

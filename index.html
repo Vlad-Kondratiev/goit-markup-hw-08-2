@@ -178,7 +178,7 @@
         </section>
 
 
-        <!-================================== TEAM ====================================->
+        <!-- ============= TEAM ============ -->
 
 
         <section class="section section--other-bg">
@@ -187,7 +187,31 @@
 
                 <ul class="team">
                     <li class="team__item">
-                        <img src="./images/Игорь_Демьяненко.jpg" alt="Фото Игоря Демьяненко" width="450" height="460">
+                        <picture>
+                            <source 
+                            srcset="./images/ws-jpeg/team-demianenko1200-1x.jpg 1x,
+                            ./images/ws-jpeg/team-demianenko1200-2x.jpg 2x"
+                            media="(min-width:1200px)"
+                            />
+
+                            <source 
+                            srcset="./images/ws-jpeg/team-demianenko768-1x.jpg 1x,
+                            ./images/ws-jpeg/team-demianenko768-2x.jpg 2x"
+                            media="(min-width:768px)"
+                            />
+
+                            <source 
+                            srcset="./images/ws-jpeg/team-demianenko480-1x.jpg 1x,
+                            ./images/ws-jpeg/team-demianenko480-2x.jpg 2x"
+                            media="(min-width:480px)"
+                            />
+                        </picture>
+
+                        <!-- <img
+                        srcset=""
+                        src="./images/Игорь_Демьяненко.jpg" alt="Фото Игоря Демьяненко" 
+                        width="450" 
+                        height="460"> -->
                         <div class="team__content">
                             <h3 class="team__title">Игорь Демьяненко</h3>
                             <p lang="en" class="team__text">Product Designer</p>
@@ -344,7 +368,7 @@
         </section>
 
 
-        <!-================================= CLIENTS ================================->
+        <!-- ============== CLIENTS ============= -->
 
 
         <section class="section">
@@ -398,7 +422,7 @@
         </section>
 
 
-        <!-=================================== FOOTER =====================================->
+        <!-- ============ FOOTER ============ -->
 
         <footer class="section footer">           
             <div class="container footer__container">
@@ -516,7 +540,7 @@
 
 
 
-        <!-- ================================= MODAL ================================== -->
+        <!-- ============== MODAL =============== -->
 
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
