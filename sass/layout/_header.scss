@@ -140,7 +140,6 @@
 
 .contacts {
   display: none;
-  margin-left: auto;
 
   @media screen and(min-width:768px) {
     margin-left: auto;
@@ -167,8 +166,8 @@
   
   &__link {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
   
     &:hover,
     &:focus {
@@ -186,8 +185,6 @@
     @include align-flex;
     justify-content: center;
     color: #757575;
-  
-    @media screen and (min-width:1200px) {}
   }
 
   &__item:not(:last-child) {

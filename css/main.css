@@ -248,7 +248,6 @@ button {
 
 .contacts {
   display: none;
-  margin-left: auto;
 }
 @media screen and (min-width: 768px) {
   .contacts {
@@ -277,8 +276,6 @@ button {
 }
 .contacts__link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 .contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
