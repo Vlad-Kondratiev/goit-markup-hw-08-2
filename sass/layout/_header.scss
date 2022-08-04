@@ -14,9 +14,6 @@
   background-color: var(--primary-bg-color);
 
   &__container {
-    
-    // top: 0;
- 
     width: 100%;
     display: flex;
     align-content: center;
@@ -71,13 +68,13 @@
 
 //   }
 // }
-.menu-btn {
-  z-index: 10;
-}
+// .menu-btn {
+//   z-index: 10;
+// }
 
-.menu-btn__icon-close {
-  position: fixed;
-}
+// .menu-btn__icon-close {
+//   position: fixed;
+// }
 
 .nav {
   display: none;
@@ -85,6 +82,7 @@
 
   @media screen and (min-width:768px) {
     display: flex;
+    margin-left: auto;
   }
 
   @media screen and (min-width:1200px) {

@@ -185,14 +185,6 @@ button {
   color: #212121;
 }
 
-.menu-btn {
-  z-index: 10;
-}
-
-.menu-btn__icon-close {
-  position: fixed;
-}
-
 .nav {
   display: none;
   margin-left: auto;
@@ -200,6 +192,7 @@ button {
 @media screen and (min-width: 768px) {
   .nav {
     display: flex;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
