@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../mobile-menu"
+		},
+		{
+			"path": "../js"
+		},
+		{
+			"path": "../.vscode"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mobile-menu"
+	}
+}
