@@ -6,8 +6,9 @@
 @import "./utils/hidden";
 @import "./utils/mixins";
 
-@import "./layout/menu-btn";
+// @import "./layout/menu-btn";
 @import "./components/container";
+// @import "./components/mob-menu";
 
 @import "./layout/header";
 @import "./layout/hero";
@@ -18,6 +19,6 @@
 @import "./layout/footer";
 @import "./layout/filter";
 @import "./layout/galery";
-@import "./components/mobile-menu";
+@import "./components/mob-menu";
 
 @import "./components/modal";
